@@ -4,4 +4,52 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.header {
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.header__nav {
+  color: #ffff;
+  display: flex;
+  width: 100vw;
+}
+.header__ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+}
+.header__item {
+  width: 50%;
+  text-align: center;
+}
+
+.hero__container {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  min-height: 250px;
+  display: flex;
+}
+.hero__container__title {
+  color: #ffff;
+  display: flex;
+  align-items: center;
+}
+
+.about-section__title {
+  font-size: 36px;
+  padding: 24px 0 16px 0;
+}
+
+.about-section__img {
+  width: 100%;
+}
+
+.gallery__photo {
+  width: 100%;
+  padding: 16px;
 }/*# sourceMappingURL=bio.css.map */

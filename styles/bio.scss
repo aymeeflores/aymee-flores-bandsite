@@ -1,3 +1,5 @@
+@use "partials/partials" as *;
+
 *,
 *:before,
 *:after {
@@ -7,18 +9,56 @@
 }
 
 .header {
+  background-color: $bandsite-black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__logo {
+  }
+  &__nav {
+    color: $white;
+    display: flex;
+    width: 100vw;
+  }
+  &__ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+  }
+  &__item {
+    width: 50%;
+    text-align: center;
+  }
 }
-.header__logo {
-}
-.header__nav {
-}
-.header__item {
-}
-.hero {
-}
-.hero__title {
+
+.hero__container {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  min-height: 250px;
+  display: flex;
+
+  &__title {
+    color: $white;
+    display: flex;
+    align-items: center;
+  }
 }
 .about-section {
 }
 .about-section__title {
+  font-size: 36px;
+  padding: 24px 0 16px 0;
+}
+.about-section__img {
+  width: 100%;
+}
+.gallery__container {
+}
+.gallery__title {
+}
+.gallery__photo {
+  width: 100%;
+  padding: 16px;
 }
