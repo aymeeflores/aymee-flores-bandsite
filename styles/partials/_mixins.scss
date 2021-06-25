@@ -17,11 +17,17 @@
     font-weight: 700;
   }
 }
+@mixin subheader {
+  font-size: 20px;
+  font-weight: 600;
+}
 @mixin bodytext {
   font-size: 13px;
   font-weight: 400;
+  line-height: 18px;
   @media (min-width: $tablet-width) {
     font-size: 14px;
     font-weight: 400;
+    line-height: 18px;
   }
 }

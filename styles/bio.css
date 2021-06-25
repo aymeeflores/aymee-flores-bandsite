@@ -6,12 +6,12 @@
 @font-face {
   font-family: "avenirNextLTpro";
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
-  font-weight: 600;
+  font-weight: 500;
 }
 @font-face {
   font-family: "avenirNextLTpro";
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
-  font-weight: 700;
+  font-weight: 600;
 }
 *,
 *:before,
@@ -29,9 +29,6 @@
   flex-wrap: wrap;
   width: 100%;
   padding: 1em;
-}
-.header__logo {
-  padding: 2em;
 }
 .header__nav {
   color: #ffff;
@@ -54,6 +51,7 @@
   background-size: cover;
   min-height: 250px;
   display: flex;
+  padding-left: 1em;
 }
 .hero-container__title {
   color: #ffff;
@@ -84,13 +82,36 @@
 }
 .about-section__img {
   width: 100%;
+  padding: 16px;
+}
+.about-section__quote {
+  font-weight: 600;
+  line-height: 24px;
+  padding: 16px;
+}
+.about-section__h2 {
+  padding: 16px 16px 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.about-section__text {
+  padding: 16px 16px 5px 16px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+@media (min-width: 768px) {
+  .about-section__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
 }
 
 .gallery {
   background-color: #fafafa;
 }
 .gallery__title {
-  padding: 16px 16px 0 16px;
   font-size: 24px;
   font-weight: 700;
   padding: 16px;
@@ -104,4 +125,29 @@
 .gallery__photo {
   width: 100%;
   padding: 16px;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffff;
+}
+.footer__title {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 0 0 10px;
+}
+.footer__icons {
+  padding: 10px;
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+}
+.footer__text {
+  font-size: 13px;
+  line-height: 18px;
+  padding: 10px;
+}
+.footer__logo {
+  padding: 10px;
 }/*# sourceMappingURL=bio.css.map */

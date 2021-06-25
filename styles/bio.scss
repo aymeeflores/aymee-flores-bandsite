@@ -20,7 +20,6 @@
   padding: 1em;
 
   &__logo {
-    padding: 2em;
   }
   &__nav {
     color: $white;
@@ -38,12 +37,12 @@
     padding: 1em;
   }
 }
-
 .hero-container {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   min-height: 250px;
   display: flex;
+  padding-left: 1em;
 
   &__title {
     color: $white;
@@ -60,16 +59,53 @@
   }
   &__img {
     width: 100%;
+    padding: 16px;
+  }
+  &__quote {
+    font-weight: 600;
+    line-height: 24px;
+    padding: 16px;
+  }
+  &__h2 {
+    padding: 16px 16px 0 16px;
+    @include subheader;
+  }
+  &__text {
+    padding: 16px 16px 5px 16px;
+    @include bodytext;
   }
 }
 .gallery {
   background-color: $alabaster;
   &__title {
-    padding: 16px 16px 0 16px;
     @include sectionheader;
   }
   &__photo {
     width: 100%;
     padding: 16px;
+  }
+}
+.footer {
+  background-color: $bandsite-black;
+  color: $white;
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 0 0 10px;
+  }
+  &__icons {
+    padding: 10px;
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 10px;
+  }
+  &__logo {
+    padding: 10px;
   }
 }
