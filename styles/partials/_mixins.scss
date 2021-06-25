@@ -1,3 +1,27 @@
-@mixin mobile {
-    
+@use "./partials" as *;
+
+@mixin pageheader {
+  font-size: 24px;
+  font-weight: 700;
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    font-weight: 700;
+  }
+}
+@mixin sectionheader {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 16px;
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+@mixin bodytext {
+  font-size: 13px;
+  font-weight: 400;
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    font-weight: 400;
+  }
 }

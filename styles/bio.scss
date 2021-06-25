@@ -1,4 +1,6 @@
 @use "partials/partials" as *;
+@use "partials/mixins" as *;
+@use "./fonts" as *;
 
 *,
 *:before,
@@ -6,6 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: avenirNextLTpro;
 }
 
 .header {
@@ -14,8 +17,10 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  padding: 1em;
 
   &__logo {
+    padding: 2em;
   }
   &__nav {
     color: $white;
@@ -30,10 +35,11 @@
   &__item {
     width: 50%;
     text-align: center;
+    padding: 1em;
   }
 }
 
-.hero__container {
+.hero-container {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   min-height: 250px;
@@ -43,22 +49,27 @@
     color: $white;
     display: flex;
     align-items: center;
+    @include pageheader;
   }
 }
 .about-section {
+  &__title {
+    font-size: 36px;
+    padding: 24px 0 16px 0;
+    @include sectionheader;
+  }
+  &__img {
+    width: 100%;
+  }
 }
-.about-section__title {
-  font-size: 36px;
-  padding: 24px 0 16px 0;
-}
-.about-section__img {
-  width: 100%;
-}
-.gallery__container {
-}
-.gallery__title {
-}
-.gallery__photo {
-  width: 100%;
-  padding: 16px;
+.gallery {
+  background-color: $alabaster;
+  &__title {
+    padding: 16px 16px 0 16px;
+    @include sectionheader;
+  }
+  &__photo {
+    width: 100%;
+    padding: 16px;
+  }
 }
