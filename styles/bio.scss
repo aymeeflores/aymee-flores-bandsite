@@ -8,33 +8,58 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: avenirNextLTpro;
+  font-family: "avenirNextLTpro";
 }
 
 .header {
   background-color: $bandsite-black;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1em;
+  padding: 1.5em 0 0 0;
+  @media (min-width: $tablet-width) {
+    width: auto;
+    align-items: center;
+    justify-content: right;
+    padding: 0;
+  }
 
   &__logo {
+    height: 3em;
+    width: 3em;
   }
   &__nav {
-    color: $white;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: $white;
     width: 100vw;
+    @media (min-width: $tablet-width) {
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 2em;
+    }
   }
   &__ul {
     display: flex;
     list-style-type: none;
     width: 100%;
+    @media (min-width: $tablet-width) {
+      width: auto;
+    }
   }
   &__item {
     width: 50%;
     text-align: center;
-    padding: 1em;
+    padding-top: 1em;
+    &:hover {
+      border-bottom: solid 3px white;
+    }
+    @media (min-width: $tablet-width) {
+      width: auto;
+      margin-left: 2em;
+      padding: 2em 0 2em 0;
+    }
+    &--active {
+      border-bottom: solid 3px white;
+    }
   }
 }
 .hero-container {
@@ -43,6 +68,9 @@
   min-height: 250px;
   display: flex;
   padding-left: 1em;
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+  }
 
   &__title {
     color: $white;
@@ -53,8 +81,6 @@
 }
 .about-section {
   &__title {
-    font-size: 36px;
-    padding: 24px 0 16px 0;
     @include sectionheader;
   }
   &__img {
@@ -67,7 +93,6 @@
     padding: 16px;
   }
   &__h2 {
-    padding: 16px 16px 0 16px;
     @include subheader;
   }
   &__text {
@@ -82,7 +107,7 @@
   }
   &__photo {
     width: 100%;
-    padding: 16px;
+    padding: 16px 16px 0 16px;
   }
 }
 .footer {

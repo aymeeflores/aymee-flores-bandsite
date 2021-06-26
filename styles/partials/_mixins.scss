@@ -5,13 +5,13 @@
   font-weight: 700;
   @media (min-width: $tablet-width) {
     font-size: 60px;
-    font-weight: 700;
+    font-weight: 400;
   }
 }
 @mixin sectionheader {
   font-size: 24px;
   font-weight: 700;
-  padding: 16px;
+  padding: 1em 1em 0 1em;
   @media (min-width: $tablet-width) {
     font-size: 36px;
     font-weight: 700;
@@ -20,6 +20,7 @@
 @mixin subheader {
   font-size: 20px;
   font-weight: 600;
+  padding: 16px 16px 0 16px;
 }
 @mixin bodytext {
   font-size: 13px;
