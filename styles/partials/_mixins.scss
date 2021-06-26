@@ -2,7 +2,7 @@
 
 @mixin pageheader {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   @media (min-width: $tablet-width) {
     font-size: 60px;
     font-weight: 400;
@@ -10,25 +10,22 @@
 }
 @mixin sectionheader {
   font-size: 24px;
-  font-weight: 700;
-  padding: 1em 1em 0 1em;
+  font-weight: 400;
   @media (min-width: $tablet-width) {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 400;
   }
 }
 @mixin subheader {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 16px 16px 0 16px;
 }
 @mixin bodytext {
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 18px;
   @media (min-width: $tablet-width) {
     font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
   }
 }
