@@ -66,6 +66,7 @@
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   min-height: 15.625rem;
+  position: relative;
   display: flex;
   padding-left: 1rem;
   position: relative;
@@ -75,8 +76,17 @@
   @media (min-width: $desktop-width) {
     min-height: 37.5rem;
   }
-
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(50, 50, 50, 0.5);
+  }
   &__title {
+    position: relative;
     color: $white;
     display: flex;
     align-items: center;
@@ -160,23 +170,19 @@
     padding: 0 6rem 0 6rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     &__logo {
       order: -1;
     }
   }
   &__header {
     padding: 1rem 0 0 1rem;
-    @include maxwidth;
     @media (min-width: $tablet-width) {
       display: flex;
-      align-items: center;
       padding: 1rem;
       order: -2;
     }
   }
   &__title {
-    @include maxwidth;
     @include sectionheader;
     @media (min-width: $tablet-width) {
       font-size: 1.875rem;
@@ -207,7 +213,6 @@
   }
   &__logo {
     padding: 1rem;
-    @include maxwidth;
   }
   &__disclaimer {
     padding: 1.25rem 1.25rem 1.25rem 1rem;
@@ -215,4 +220,11 @@
     @include bodytext;
     @include maxwidth;
   }
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
