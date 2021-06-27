@@ -76,7 +76,7 @@ a:active {
   padding-top: 1rem;
 }
 .header__item:hover {
-  border-bottom: solid 0.1875rem magenta;
+  border-bottom: solid 0.1875rem #ff007f;
 }
 @media (min-width: 768px) {
   .header__item {

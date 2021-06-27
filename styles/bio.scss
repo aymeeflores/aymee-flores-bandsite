@@ -50,7 +50,7 @@
     text-align: center;
     padding-top: 1rem;
     &:hover {
-      border-bottom: solid 0.1875rem magenta;
+      border-bottom: solid 0.1875rem #ff007f;
     }
     @media (min-width: $tablet-width) {
       width: auto;
