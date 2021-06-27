@@ -76,7 +76,7 @@ a:active {
   padding-top: 1rem;
 }
 .header__item:hover {
-  border-bottom: solid 0.1875rem white;
+  border-bottom: solid 0.1875rem magenta;
 }
 @media (min-width: 768px) {
   .header__item {
@@ -302,12 +302,11 @@ a:active {
     display: flex;
     padding: 1rem;
     order: -2;
-    margin-right: auto;
   }
 }
 @media (min-width: 1279px) {
   .footer__header {
-    flex-basis: 35%;
+    flex-basis: 25%;
   }
 }
 @media (min-width: 1279px) and (min-width: 1279px) {
@@ -319,6 +318,12 @@ a:active {
 .footer__title {
   font-size: 24px;
   font-weight: 400;
+}
+@media (min-width: 1279px) {
+  .footer__title {
+    max-width: 1020px;
+    margin: auto;
+  }
 }
 @media (min-width: 768px) {
   .footer__title {

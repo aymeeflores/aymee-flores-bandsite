@@ -50,7 +50,7 @@
     text-align: center;
     padding-top: 1rem;
     &:hover {
-      border-bottom: solid 0.1875rem white;
+      border-bottom: solid 0.1875rem magenta;
     }
     @media (min-width: $tablet-width) {
       width: auto;
@@ -187,14 +187,14 @@
       display: flex;
       padding: 1rem;
       order: -2;
-      margin-right: auto;
     }
     @media (min-width: $desktop-width) {
-      flex-basis: 35%;
+      flex-basis: 25%;
       @include maxwidth;
     }
   }
   &__title {
+    @include maxwidth;
     @include sectionheader;
     @media (min-width: $tablet-width) {
       font-size: 1.875rem;
