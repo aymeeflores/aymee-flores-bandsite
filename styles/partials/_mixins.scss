@@ -29,3 +29,9 @@
     font-size: 14px;
   }
 }
+@mixin maxwidth {
+  @media (min-width: $desktop-width) {
+    max-width: 1020px;
+    margin: auto;
+  }
+}
