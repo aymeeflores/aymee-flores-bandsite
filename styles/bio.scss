@@ -10,7 +10,7 @@
   padding: 0;
   font-family: "avenirNextLTpro";
 }
-
+@include linkreset;
 .header {
   background-color: $bandsite-black;
   padding: 1.5rem 0 0 0;
@@ -103,6 +103,7 @@
   &__img {
     width: 100%;
     padding: 1rem;
+
     @media (min-width: $tablet-width) {
       padding: 0 6rem 0 6rem;
     }
@@ -149,6 +150,10 @@
   &__photo {
     width: 100%;
     padding: 1rem 1rem 0 1rem;
+    filter: grayscale(100%);
+    &:hover {
+      filter: none;
+    }
     @media (min-width: $tablet-width) {
       width: calc(33.33% - (40px / 3));
       padding: 0.5rem;
@@ -167,26 +172,32 @@
   background-color: $bandsite-black;
   color: $white;
   @media (min-width: $tablet-width) {
-    padding: 0 6rem 0 6rem;
+    padding: 2rem 6rem 0 6rem;
     display: flex;
     flex-wrap: wrap;
+
     &__logo {
       order: -1;
     }
   }
   &__header {
     padding: 1rem 0 0 1rem;
+    justify-content: space-between;
     @media (min-width: $tablet-width) {
       display: flex;
       padding: 1rem;
       order: -2;
+      margin-right: auto;
+    }
+    @media (min-width: $desktop-width) {
+      flex-basis: 35%;
+      @include maxwidth;
     }
   }
   &__title {
     @include sectionheader;
     @media (min-width: $tablet-width) {
       font-size: 1.875rem;
-      padding-right: 0.5rem;
     }
   }
   &__icons {
@@ -213,6 +224,7 @@
   }
   &__logo {
     padding: 1rem;
+    @include maxwidth;
   }
   &__disclaimer {
     padding: 1.25rem 1.25rem 1.25rem 1rem;
@@ -220,11 +232,4 @@
     @include bodytext;
     @include maxwidth;
   }
-}
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
 }

@@ -22,6 +22,14 @@
   font-family: "avenirNextLTpro";
 }
 
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header {
   background-color: #323232;
   padding: 1.5rem 0 0 0;
@@ -246,6 +254,10 @@
 .gallery__photo {
   width: 100%;
   padding: 1rem 1rem 0 1rem;
+  filter: grayscale(100%);
+}
+.gallery__photo:hover {
+  filter: none;
 }
 @media (min-width: 768px) {
   .gallery__photo {
@@ -273,7 +285,7 @@
 }
 @media (min-width: 768px) {
   .footer {
-    padding: 0 6rem 0 6rem;
+    padding: 2rem 6rem 0 6rem;
     display: flex;
     flex-wrap: wrap;
   }
@@ -283,12 +295,25 @@
 }
 .footer__header {
   padding: 1rem 0 0 1rem;
+  justify-content: space-between;
 }
 @media (min-width: 768px) {
   .footer__header {
     display: flex;
     padding: 1rem;
     order: -2;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1279px) {
+  .footer__header {
+    flex-basis: 35%;
+  }
+}
+@media (min-width: 1279px) and (min-width: 1279px) {
+  .footer__header {
+    max-width: 1020px;
+    margin: auto;
   }
 }
 .footer__title {
@@ -304,7 +329,6 @@
 @media (min-width: 768px) {
   .footer__title {
     font-size: 1.875rem;
-    padding-right: 0.5rem;
   }
 }
 .footer__icons {
@@ -345,6 +369,12 @@
 .footer__logo {
   padding: 1rem;
 }
+@media (min-width: 1279px) {
+  .footer__logo {
+    max-width: 1020px;
+    margin: auto;
+  }
+}
 .footer__disclaimer {
   padding: 1.25rem 1.25rem 1.25rem 1rem;
   width: 100%;
@@ -362,12 +392,4 @@
     max-width: 1020px;
     margin: auto;
   }
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
 }/*# sourceMappingURL=bio.css.map */
