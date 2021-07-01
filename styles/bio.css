@@ -135,7 +135,7 @@ a:active {
 @media (min-width: 1279px) {
   .about-section {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 .about-section__title {
@@ -152,7 +152,7 @@ a:active {
 @media (min-width: 1279px) {
   .about-section__title {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 .about-section__img {
@@ -167,7 +167,7 @@ a:active {
 @media (min-width: 1279px) {
   .about-section__img {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 .about-section__quote {
@@ -183,7 +183,7 @@ a:active {
 @media (min-width: 1279px) {
   .about-section__quote {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 .about-section__h2 {
@@ -199,7 +199,7 @@ a:active {
 @media (min-width: 1279px) {
   .about-section__h2 {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 768px) {
@@ -211,7 +211,7 @@ a:active {
 @media (min-width: 768px) and (min-width: 1279px) {
   .about-section__biowrap {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 .about-section__text {
@@ -248,7 +248,7 @@ a:active {
 @media (min-width: 1279px) {
   .gallery__title {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 .gallery__photo {
@@ -275,55 +275,43 @@ a:active {
 @media (min-width: 1279px) {
   .gallery__wrap {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
 .footer {
   background-color: #323232;
   color: #ffff;
+  padding: 1rem 1rem 2rem 1rem;
 }
-@media (min-width: 768px) {
-  .footer {
-    padding: 2rem 6rem 0 6rem;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .footer__logo {
-    order: -1;
-  }
-}
-.footer__header {
-  padding: 1rem 0 0 1rem;
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
-@media (min-width: 768px) {
-  .footer__header {
-    display: flex;
-    padding: 1rem;
-    order: -2;
-  }
-}
 @media (min-width: 1279px) {
-  .footer__header {
-    flex-basis: 25%;
-  }
-}
-@media (min-width: 1279px) and (min-width: 1279px) {
-  .footer__header {
+  .footer__container {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
+
+.footer__left {
+  flex-grow: 1;
+}
+
+.footer__header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1rem 0 0 0;
+}
+
 .footer__title {
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: 400;
-}
-@media (min-width: 1279px) {
-  .footer__title {
-    max-width: 1020px;
-    margin: auto;
-  }
 }
 @media (min-width: 768px) {
   .footer__title {
@@ -331,70 +319,58 @@ a:active {
     font-weight: 400;
   }
 }
-@media (min-width: 768px) {
-  .footer__title {
-    font-size: 1.875rem;
-  }
+
+.footer__icons img {
+  margin-right: 10px;
 }
-.footer__icons {
-  padding: 0.5rem;
+
+.footer__right {
+  padding-top: 1rem;
 }
-@media (min-width: 1279px) {
-  .footer__body {
-    max-width: 1020px;
-    margin: auto;
-  }
+
+.footer__body {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-@media (min-width: 768px) {
-  .footer__body {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-  .footer__body :nth-child(3n) {
-    order: 1;
-  }
+
+.footer__body__column {
+  margin-bottom: 30px;
 }
-.footer__text {
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 18px;
-  padding: 1rem;
+
+.footer__body__column > p {
+  margin-bottom: 10px;
 }
-@media (min-width: 768px) {
-  .footer__text {
-    font-size: 14px;
-  }
-}
-@media (min-width: 768px) {
-  .footer__text {
-    width: 33.3%;
-  }
-}
-.footer__logo {
-  padding: 1rem;
-}
-@media (min-width: 1279px) {
-  .footer__logo {
-    max-width: 1020px;
-    margin: auto;
-  }
-}
+
 .footer__disclaimer {
-  padding: 1.25rem 1.25rem 1.25rem 1rem;
-  width: 100%;
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 18px;
-}
-@media (min-width: 768px) {
-  .footer__disclaimer {
-    font-size: 14px;
-  }
+  padding-top: 20px;
 }
 @media (min-width: 1279px) {
   .footer__disclaimer {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    flex-direction: row;
+  }
+
+  .footer__header {
+    flex-direction: row;
+  }
+
+  .footer__title {
+    margin-right: 20px;
+  }
+
+  .footer__body {
+    flex-direction: row;
+  }
+
+  .footer__body__column > p {
+    margin-bottom: 30px;
   }
 }/*# sourceMappingURL=bio.css.map */

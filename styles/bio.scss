@@ -168,68 +168,161 @@
     @include maxwidth;
   }
 }
+
 .footer {
   background-color: $bandsite-black;
   color: $white;
-  @media (min-width: $tablet-width) {
-    padding: 2rem 6rem 0 6rem;
-    display: flex;
-    flex-wrap: wrap;
+  padding: 1rem 1rem 2rem 1rem;
+}
 
-    &__logo {
-      order: -1;
-    }
-  }
-  &__header {
-    padding: 1rem 0 0 1rem;
-    justify-content: space-between;
-    @media (min-width: $tablet-width) {
-      display: flex;
-      padding: 1rem;
-      order: -2;
-    }
-    @media (min-width: $desktop-width) {
-      flex-basis: 25%;
-      @include maxwidth;
-    }
-  }
-  &__title {
-    @include maxwidth;
-    @include sectionheader;
-    @media (min-width: $tablet-width) {
-      font-size: 1.875rem;
-    }
-  }
-  &__icons {
-    padding: 0.5rem;
+.footer__container {
+  @include maxwidth;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__left {
+  flex-grow: 1;
+}
+
+.footer__header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1rem 0 0 0;
+}
+.footer__title {
+  margin-bottom: 20px;
+  @include sectionheader;
+}
+
+.footer__icons img {
+  margin-right: 10px;
+}
+
+.footer__right {
+  padding-top: 1rem;
+}
+
+.footer__body {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__body__column {
+  margin-bottom: 30px;
+}
+
+.footer__body__column > p {
+  margin-bottom: 10px;
+}
+
+.footer__disclaimer {
+  padding-top: 20px;
+  @include maxwidth;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
   }
 
-  &__body {
-    @include maxwidth;
-    @media (min-width: $tablet-width) {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      :nth-child(3n) {
-        order: 1;
-      }
-    }
+  .footer__container {
+    flex-direction: row;
   }
-  &__text {
-    @include bodytext;
-    padding: 1rem;
-    @media (min-width: $tablet-width) {
-      width: 33.3%;
-    }
+
+  .footer__left {
   }
-  &__logo {
-    padding: 1rem;
-    @include maxwidth;
+
+  .footer__header {
+    flex-direction: row;
   }
-  &__disclaimer {
-    padding: 1.25rem 1.25rem 1.25rem 1rem;
-    width: 100%;
-    @include bodytext;
-    @include maxwidth;
+  .footer__title {
+    margin-right: 20px;
+  }
+
+  .footer__icons img {
+  }
+
+  .footer__right {
+  }
+
+  .footer__body {
+    flex-direction: row;
+  }
+
+  .footer__body__column > p {
+    margin-bottom: 30px;
+  }
+
+  .footer__disclaimer {
   }
 }
+
+// .footer {
+//   background-color: $bandsite-black;
+//   color: $white;
+//   @media (min-width: $tablet-width) {
+//     padding: 2rem 6rem 0 6rem;
+//     display: flex;
+//     flex-wrap: wrap;
+
+//     &__logo {
+//       order: -1;
+//     }
+//   }
+//   &__header {
+//     padding: 1rem 0 0 1rem;
+//     justify-content: space-between;
+//     @media (min-width: $tablet-width) {
+//       display: flex;
+//       padding: 1rem;
+//       order: -2;
+//     }
+//     @media (min-width: $desktop-width) {
+//       flex-basis: 25%;
+//       @include maxwidth;
+//     }
+//   }
+//   &__title {
+//     @include maxwidth;
+//     @include sectionheader;
+//     @media (min-width: $tablet-width) {
+//       font-size: 1.875rem;
+//     }
+//   }
+//   &__icons {
+//     padding: 0.5rem;
+//   }
+
+//   &__body {
+//     @include maxwidth;
+//     @media (min-width: $tablet-width) {
+//       display: flex;
+//       flex-wrap: wrap;
+//       align-items: flex-start;
+//       :nth-child(3n) {
+//         order: 1;
+//       }
+//     }
+//   }
+//   &__text {
+//     @include bodytext;
+//     padding: 1rem;
+//     @media (min-width: $tablet-width) {
+//       width: 33.3%;
+//     }
+//   }
+//   &__logo {
+//     padding: 1rem;
+//     @include maxwidth;
+//   }
+//   &__disclaimer {
+//     padding: 1.25rem 1.25rem 1.25rem 1rem;
+//     width: 100%;
+//     @include bodytext;
+//     @include maxwidth;
+//   }
+// }

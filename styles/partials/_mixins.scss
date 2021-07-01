@@ -32,7 +32,7 @@
 @mixin maxwidth {
   @media (min-width: $desktop-width) {
     max-width: 1020px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 @mixin linkreset {
