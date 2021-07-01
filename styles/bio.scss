@@ -158,6 +158,10 @@
     @include maxwidth;
   }
 }
+.comments-form {
+  @include maxwidth;
+  display: flex;
+}
 
 .footer {
   background-color: $bandsite-black;
