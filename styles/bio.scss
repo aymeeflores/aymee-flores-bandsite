@@ -64,27 +64,17 @@
 }
 .hero-container {
   background-image: url("../assets/images/hero-bio.jpg");
-  background-size: cover;
-  min-height: 15.625rem;
-  position: relative;
-  display: flex;
-  padding-left: 1rem;
-  position: relative;
+
+  @include herocontainerspecs;
+  @include herooverlay;
+
   @media (min-width: $tablet-width) {
     min-height: 25rem;
   }
   @media (min-width: $desktop-width) {
     min-height: 37.5rem;
   }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background: rgba(50, 50, 50, 0.5);
-  }
+
   &__title {
     position: relative;
     color: $white;

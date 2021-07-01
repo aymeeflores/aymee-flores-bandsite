@@ -1,1 +1,62 @@
-@use "./partials" as *;
+@use "./partials/partials" as *;
+@use "./partials/mixins" as *;
+
+.showhero-container {
+  @include herocontainerspecs;
+  @include herooverlay;
+  flex-direction: column;
+  padding: 16px;
+
+  background-image: url("../assets/images/hero-shows.jpg");
+  @media (min-width: $tablet-width) {
+    min-height: 25rem;
+  }
+  @media (min-width: $desktop-width) {
+    min-height: 37.5rem;
+  }
+  &__subtitle {
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+  }
+}
+.shows {
+  padding: 16px 0 0 16px;
+  &__details {
+    padding: 16px;
+    border-bottom: 2px solid $mercury;
+  }
+  &__maintitle {
+    font-size: 34px;
+    font-weight: 400;
+    padding: 16px;
+    display: flex;
+  }
+  &__subtitles {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $silver;
+    padding-bottom: 5px;
+  }
+  &__date {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  &__text {
+    font-size: 18px;
+    padding-bottom: 16px;
+    font-weight: 300;
+  }
+  &__tickets {
+    background-color: $bandsite-black;
+    text-transform: uppercase;
+    color: $white;
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+  }
+}

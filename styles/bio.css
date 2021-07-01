@@ -98,6 +98,15 @@ a:active {
   padding-left: 1rem;
   position: relative;
 }
+.hero-container:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(50, 50, 50, 0.5);
+}
 @media (min-width: 768px) {
   .hero-container {
     min-height: 25rem;
@@ -107,15 +116,6 @@ a:active {
   .hero-container {
     min-height: 37.5rem;
   }
-}
-.hero-container:before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background: rgba(50, 50, 50, 0.5);
 }
 .hero-container__title {
   position: relative;

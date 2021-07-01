@@ -44,3 +44,22 @@
     color: inherit;
   }
 }
+@mixin herocontainerspecs {
+  background-size: cover;
+  min-height: 15.625rem;
+  position: relative;
+  display: flex;
+  padding-left: 1rem;
+  position: relative;
+}
+@mixin herooverlay {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(50, 50, 50, 0.5);
+  }
+}

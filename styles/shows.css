@@ -1,0 +1,76 @@
+.showhero-container {
+  background-size: cover;
+  min-height: 15.625rem;
+  position: relative;
+  display: flex;
+  padding-left: 1rem;
+  position: relative;
+  flex-direction: column;
+  padding: 16px;
+  background-image: url("../assets/images/hero-shows.jpg");
+}
+.showhero-container:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(50, 50, 50, 0.5);
+}
+@media (min-width: 768px) {
+  .showhero-container {
+    min-height: 25rem;
+  }
+}
+@media (min-width: 1279px) {
+  .showhero-container {
+    min-height: 37.5rem;
+  }
+}
+.showhero-container__subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  position: relative;
+  color: #ffff;
+  display: flex;
+  align-items: center;
+}
+
+.shows {
+  padding: 16px 0 0 16px;
+}
+.shows__details {
+  padding: 16px;
+  border-bottom: 2px solid #e1e1e1;
+}
+.shows__maintitle {
+  font-size: 34px;
+  font-weight: 400;
+  padding: 16px;
+  display: flex;
+}
+.shows__subtitles {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #afafaf;
+  padding-bottom: 5px;
+}
+.shows__date {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.shows__text {
+  font-size: 18px;
+  padding-bottom: 16px;
+  font-weight: 300;
+}
+.shows__tickets {
+  background-color: #323232;
+  text-transform: uppercase;
+  color: #ffff;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+}/*# sourceMappingURL=shows.css.map */
