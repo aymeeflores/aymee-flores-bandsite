@@ -306,6 +306,13 @@ a:active {
 .comments__question {
   margin-bottom: 20px;
 }
+.comments__question input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #cacaca;
+}
 .comments__question label {
   text-transform: uppercase;
   color: #cacaca;
@@ -313,12 +320,12 @@ a:active {
   display: block;
   margin-bottom: 5px;
 }
-.comments__input {
+.comments__question textarea {
   display: block;
-  padding: 10px;
   width: 100%;
   border-radius: 4px;
   border: 1px solid #cacaca;
+  padding: 12px;
 }
 .comments__input--error {
   border: 2px solid red;
