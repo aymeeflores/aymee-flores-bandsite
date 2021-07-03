@@ -39,6 +39,8 @@ button.addEventListener("click", function (e) {
     date: date,
   });
   container.innerHTML = "";
+  name.value = "";
+  comment.value = "";
   addAllComments();
   if (name.classList.contains("comments__input--error")) {
     name.classList.remove("comments__input--error");
