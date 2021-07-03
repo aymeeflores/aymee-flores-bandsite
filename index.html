@@ -113,18 +113,61 @@
         />
       </div>
     </section>
-    <section>
-      <h2>Join the Conversation</h2>
-      <form id="commentsForm" class="comments-form">
-        <div class="question">
-          <label for="name">Name</label>
-          <input type="name" name="name" placeholder="Enter your name" />
+
+    <section class="comments">
+      <h2 class="comments__title">Join the Conversation</h2>
+      <div class="comments__container">
+        <div class="comments__container--left">
+          <div class="comments__avatar"></div>
         </div>
-        <div class="question">
-          <label for="comment" placeholder="Add a new comment"> Comment </label>
-          <textarea rows="4" cols="50" type="text" name="comment"></textarea>
+
+        <div class="comments__container--right">
+          <form>
+            <div class="comments__question">
+              <label for="name">Name</label>
+              <input
+                class="comments__input"
+                type="name"
+                name="name"
+                placeholder="Enter your name"
+                id="inputName"
+              />
+            </div>
+
+            <div class="comments__question">
+              <label for="comment">Comment </label>
+              <textarea
+                class="comments__input"
+                id="inputComment"
+                rows="4"
+                type="text"
+                name="comment"
+                placeholder="Add a new comment"
+              ></textarea>
+            </div>
+
+            <button type="submit" id="commentButton" class="comments__button">
+              COMMENT
+            </button>
+          </form>
         </div>
-      </form>
+      </div>
+      <div id="comments_list" class="comments__list">
+        <!-- begin :: item-->
+        <div class="comments__item">
+          <div class="comments__item__avatar">
+            <div class="comments__avatar"></div>
+          </div>
+          <div class="comments__item__rightside">
+            <div class="comments__item__title">
+              <div class="comments__item__name">Aymee</div>
+              <div class="comments__item__date">02/15/2021</div>
+            </div>
+            <div class="comments__item__content">This is art bla bla bla</div>
+          </div>
+        </div>
+        <!-- end :: item -->
+      </div>
     </section>
 
     <footer class="footer">
@@ -199,5 +242,7 @@
         Copyright The Bees Knees © 2021 All Rights Reserved
       </div>
     </footer>
+
+    <script src="bio.js"></script>
   </body>
 </html>
