@@ -25,7 +25,7 @@ let showsArray = [
     location: "San Francisco, CA",
   },
   {
-    date: "Wed Dec 15 26 2021",
+    date: "Wed Dec 15 2021",
     venue: "Moscow Center",
     location: "San Francisco, CA",
   },

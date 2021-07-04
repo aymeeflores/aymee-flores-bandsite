@@ -28,6 +28,21 @@
     min-height: 37.5rem;
   }
 }
+.showhero-container__title {
+  position: relative;
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  padding: 0 0 16px 16px;
+  font-size: 24px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .showhero-container__title {
+    font-size: 60px;
+    font-weight: 400;
+  }
+}
 .showhero-container__subtitle {
   font-size: 14px;
   font-weight: 300;
@@ -35,20 +50,74 @@
   color: #ffff;
   display: flex;
   align-items: center;
+  padding: 16px 0 5px 16px;
+}
+@media (min-width: 768px) {
+  .showhero-container__subtitle {
+    font-size: 18px;
+  }
+}
+.showhero-container__iframe {
+  width: 80%;
+  height: 100;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  .showhero-container__iframe {
+    max-width: 40%;
+  }
+}
+@media (min-width: 1279px) {
+  .showhero-container__iframe {
+    height: 150;
+  }
 }
 
 .shows {
   padding: 16px 0 0 16px;
 }
+.shows__hiddenlabels {
+  display: flex;
+  padding-left: 16px;
+  width: 100%;
+}
+.shows__labels {
+  display: none;
+}
+@media (min-width: 768px) {
+  .shows__labels {
+    text-transform: uppercase;
+    color: #afafaf;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    width: 30%;
+  }
+}
+.shows__labels--filler {
+  width: 48%;
+}
 .shows__details {
   padding: 16px;
   border-bottom: 2px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .shows__details {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 .shows__maintitle {
   font-size: 34px;
   font-weight: 400;
   padding: 16px;
   display: flex;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .shows__maintitle {
+    font-size: 45px;
+  }
 }
 .shows__subtitles {
   font-size: 18px;
@@ -56,6 +125,11 @@
   text-transform: uppercase;
   color: #afafaf;
   padding-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .shows__subtitles {
+    display: none;
+  }
 }
 .shows__date {
   font-size: 20px;
@@ -65,6 +139,7 @@
   font-size: 18px;
   padding-bottom: 16px;
   font-weight: 300;
+  width: 100%;
 }
 .shows__tickets {
   background-color: #323232;
@@ -73,4 +148,12 @@
   height: 40px;
   width: 100%;
   border-radius: 6px;
+}
+@media (min-width: 768px) {
+  .shows__tickets {
+    max-width: 150px;
+  }
+}
+.shows__tickets:hover {
+  background-color: black;
 }/*# sourceMappingURL=shows.css.map */
