@@ -6,7 +6,7 @@
   padding-left: 1rem;
   position: relative;
   flex-direction: column;
-  padding: 16px;
+  padding: 1rem;
   background-image: url("../assets/images/hero-shows.jpg");
 }
 .showhero-container:before {
@@ -26,6 +26,9 @@
 @media (min-width: 1279px) {
   .showhero-container {
     min-height: 37.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 }
 .showhero-container__title {
@@ -33,7 +36,7 @@
   color: #ffff;
   display: flex;
   align-items: center;
-  padding: 0 0 16px 16px;
+  padding: 0 0 1rem 1rem;
   font-size: 24px;
   font-weight: 400;
 }
@@ -44,27 +47,27 @@
   }
 }
 .showhero-container__subtitle {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   position: relative;
   color: #ffff;
   display: flex;
   align-items: center;
-  padding: 16px 0 5px 16px;
+  padding: 1rem 0 0.3125rem 1rem;
 }
 @media (min-width: 768px) {
   .showhero-container__subtitle {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 .showhero-container__iframe {
-  width: 80%;
-  height: 100;
-  padding: 16px;
+  width: 50%;
+  height: 200;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .showhero-container__iframe {
-    max-width: 40%;
+    max-width: 70%;
   }
 }
 @media (min-width: 1279px) {
@@ -74,11 +77,11 @@
 }
 
 .shows {
-  padding: 16px 0 0 16px;
+  padding: 1rem 0 0 1rem;
 }
 .shows__hiddenlabels {
   display: flex;
-  padding-left: 16px;
+  padding-left: 1rem;
   width: 100%;
 }
 .shows__labels {
@@ -88,7 +91,7 @@
   .shows__labels {
     text-transform: uppercase;
     color: #afafaf;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 400;
     display: block;
     width: 30%;
@@ -98,8 +101,8 @@
   width: 48%;
 }
 .shows__details {
-  padding: 16px;
-  border-bottom: 2px solid #e1e1e1;
+  padding: 1rem;
+  border-bottom: 0.125rem solid #e1e1e1;
 }
 @media (min-width: 768px) {
   .shows__details {
@@ -108,23 +111,23 @@
   }
 }
 .shows__maintitle {
-  font-size: 34px;
+  font-size: 2.125rem;
   font-weight: 400;
-  padding: 16px;
+  padding: 1rem;
   display: flex;
   width: 100%;
 }
 @media (min-width: 768px) {
   .shows__maintitle {
-    font-size: 45px;
+    font-size: 2.8125rem;
   }
 }
 .shows__subtitles {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #afafaf;
-  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
 }
 @media (min-width: 768px) {
   .shows__subtitles {
@@ -132,12 +135,12 @@
   }
 }
 .shows__date {
-  font-size: 20px;
-  padding-bottom: 20px;
+  font-size: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .shows__text {
-  font-size: 18px;
-  padding-bottom: 16px;
+  font-size: 1.125rem;
+  padding-bottom: 1rem;
   font-weight: 300;
   width: 100%;
 }
@@ -145,13 +148,13 @@
   background-color: #323232;
   text-transform: uppercase;
   color: #ffff;
-  height: 40px;
+  height: 2.5rem;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 0.375rem;
 }
 @media (min-width: 768px) {
   .shows__tickets {
-    max-width: 150px;
+    max-width: 9.375rem;
   }
 }
 .shows__tickets:hover {

@@ -70,7 +70,7 @@ function displayComment(comment) {
   avatarWrapper.classList.add("comments__item__avatar");
 
   let avatar = document.createElement("div");
-  avatar.classList.add("comments__avatar");
+  avatar.classList.add("comments__avatar2");
 
   avatarWrapper.appendChild(avatar);
   commentContainer.appendChild(avatarWrapper);
