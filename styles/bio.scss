@@ -60,7 +60,7 @@
 			border-bottom: solid 0.1875rem #ff007f;
 		}
 		@media (min-width: $tablet-width) {
-			font-size: 20px;
+			font-size: 18px;
 			width: auto;
 			margin-left: 2rem;
 			padding: 2rem 0 2rem 0;
@@ -89,6 +89,8 @@
 		display: flex;
 		align-items: center;
 		@include pageheader;
+		max-width: 1020px;
+		margin: 10%;
 	}
 }
 .about-section {
@@ -119,14 +121,14 @@
 	&__h2 {
 		@include subheader;
 		@media (min-width: $tablet-width) {
-			padding: 1rem 6rem 0 6rem;
+			padding: 2rem 6rem 0 6rem;
 		}
 		@include maxwidth;
 	}
 	&__biowrap {
 		@media (min-width: $tablet-width) {
 			display: flex;
-			padding: 0 6rem 0 6rem;
+			padding: 0 6rem 1rem 6rem;
 			@include maxwidth;
 		}
 	}
@@ -140,6 +142,7 @@
 	background-color: $alabaster;
 	&__title {
 		@include sectionheader;
+		padding: 2rem;
 		@media (min-width: $tablet-width) {
 			padding-left: 14.4px;
 		}
@@ -338,9 +341,6 @@
 
 	&__left {
 		flex-grow: 1;
-		@media (min-width: $desktop-width) {
-			padding-left: 250px;
-		}
 	}
 
 	&__header {
@@ -383,6 +383,7 @@
 	&__body__column {
 		margin-bottom: 30px;
 		@media screen and (min-width: $tablet-width) {
+			margin: 1rem;
 		}
 	}
 
