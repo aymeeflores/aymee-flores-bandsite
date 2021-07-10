@@ -1,91 +1,103 @@
+const api_key = "17e77cc7-b651-41d0-8184-3cf3e455a8b4";
+const api_url = "https://project-1-api.herokuapp.com";
+
+const comments_api =
+	"https://project-1-api.herokuapp.com/comments?api_key=" + api_key;
+
 let commmentArray = [];
-let apiKey = "17e77cc7-b651-41d0-8184-3cf3e455a8b4";
-let api_url = "https://project-1-api.herokuapp.com";
 
-axios
-	.get(`${api_url}/comments?api_key=${apiKey}`)
-	.then(function (response) {
-		response.data.forEach(function (elem) {
-			commmentArray.push({
-				name: elem.name,
-				content: elem.comment,
-				date: elem.timestamp,
-			});
-		});
-		addAllComments();
-	})
-	.catch(function (error) {
-		console.log(error);
-	});
-
-function saveNewComment(name, comment) {
-	axios({
-		url: `${api_url}/comments?api_key=${apiKey}`,
-		method: "post",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		data: JSON.stringify({
-			name: name,
-			comment: comment,
-		}),
-	})
+function getComments() {
+	axios
+		.get(comments_api)
 		.then(function (response) {
-			let elem = response.data;
-			commmentArray.push({
-				name: elem.name,
-				content: elem.comment,
-				date: elem.timestamp,
+			commmentArray = response.data;
+			// create single item for each comment in array
+			response.data.sort((a, b) => {
+				if (a.timestamp < b.timestamp) {
+					return -1;
+				} else if (a.timestamp > b.timestamp) {
+					return 1;
+				} else {
+					return 0;
+				}
 			});
-			addAllComments();
+			response.data.forEach((elem) => createCommentItem(elem));
 		})
 		.catch(function (error) {
 			console.log(error);
 		});
 }
 
-let button = document.getElementById("commentButton");
-
-button.addEventListener("click", function (e) {
+function postComment(e) {
 	e.preventDefault();
 	let name = document.getElementById("inputName");
 	let comment = document.getElementById("inputComment");
-	let container = document.getElementById("comments_list");
 
-	if (name.value === "" || comment.value === "") {
+	// remove previous errors
+	name.classList.remove("comments__input--error");
+	comment.classList.remove("comments__input--error");
+
+	// check errors
+	if (name.value === "") {
 		name.classList.add("comments__input--error");
+		return;
+	}
+	if (comment.value === "") {
 		comment.classList.add("comments__input--error");
 		return;
 	}
 
-	if (name.classList.contains("comments__input--error")) {
-		name.classList.remove("comments__input--error");
-	}
+	// store comment
+	axios
+		.post(comments_api, {
+			name: name.value,
+			comment: comment.value,
+		})
+		.then(function (response) {
+			// push into array
+			commmentArray.push(response.data);
+			// create single element from post
+			createCommentItem(response.data);
 
-	if (comment.classList.contains("comments__input--error")) {
-		comment.classList.remove("comments__input--error");
-	}
-
-	saveNewComment(name.value, comment.value);
-});
-
-function addAllComments() {
-	// clear all comments
-	document.getElementById("comments_list").innerHTML = "";
-	for (let i = 0; i < commmentArray.length; i++) {
-		// insert all comments again
-		displayComment(commmentArray[i]);
-	}
+			// reset inputs
+			name.value = "";
+			comment.value = "";
+		})
+		.catch((error) => console.log(error));
 }
 
-function displayComment(comment) {
-	let name = comment.name;
-	let content = comment.content;
+function updateCommentLikes(comment_id) {
+	axios
+		.put(api_url + "/comments/" + comment_id + "/like?api_key=" + api_key)
+		.then(function (response) {
+			let likes = document.getElementById("likes" + comment_id);
+			likes.innerText = response.data.likes;
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
+}
+
+function deleteComment(comment_id) {
+	axios
+		.delete(api_url + "/comments/" + comment_id + "?api_key=" + api_key)
+		.then(function (response) {
+			document.getElementById(comment_id).remove();
+		})
+		.catch(function (error) {});
+}
+
+function createCommentItem(obj) {
+	let name = obj.name;
+	let date = obj.timestamp;
+	let content = obj.comment;
+	let likes = obj.likes;
+
 	let container = document.getElementById("comments_list");
-	let date = comment.date;
 
 	let commentContainer = document.createElement("div");
 	commentContainer.classList.add("comments__item");
+	commentContainer.setAttribute("id", obj.id);
 
 	let avatarWrapper = document.createElement("div");
 	avatarWrapper.classList.add("comments__item__avatar");
@@ -120,13 +132,47 @@ function displayComment(comment) {
 	commentContent.innerText = content;
 	rightSide.appendChild(commentContent);
 
+	let statusLikesContainer = document.createElement("div");
+	let btnLike = document.createElement("button");
+	btnLike.setAttribute("type", "button");
+	btnLike.setAttribute("data-id", obj.id);
+	btnLike.classList.add("do_add_like");
+	btnLike.addEventListener("click", onBtnLikeClick);
+	btnLike.innerHTML = '<span class="material-icons">favorite</span>';
+
+	let likesCount = document.createElement("span");
+	likesCount.setAttribute("id", "likes" + obj.id);
+	likesCount.innerText = likes;
+	statusLikesContainer.appendChild(btnLike);
+	statusLikesContainer.appendChild(likesCount);
+
+	let btnDelete = document.createElement("button");
+	btnDelete.setAttribute("type", "button");
+	btnDelete.setAttribute("data-id", obj.id);
+	btnDelete.classList.add("do_delete");
+	btnDelete.addEventListener("click", onBtnDeleteClick);
+	btnDelete.innerHTML = '<span class="material-icons">delete</span>';
+
+	let statusContainer = document.createElement("div");
+	statusContainer.classList.add("comments__item__statusbar");
+
+	statusContainer.appendChild(statusLikesContainer);
+	statusContainer.appendChild(btnDelete);
+
+	rightSide.appendChild(statusContainer);
+
 	commentContainer.appendChild(rightSide);
 
 	container.prepend(commentContainer);
 }
 
-// addAllComments();
+let frm = document.getElementById("add_comment_frm");
+frm.addEventListener("submit", postComment);
 
+// fetch all comments
+getComments();
+
+// dynamic dates
 setInterval(function () {
 	let dates = document.querySelectorAll(".comments__item__date");
 
@@ -135,3 +181,16 @@ setInterval(function () {
 		elem.innerText = moment(currentDate).fromNow();
 	});
 }, 1000);
+
+// DIVING DEEPER
+function onBtnLikeClick(e) {
+	let comment_id = this.getAttribute("data-id");
+	updateCommentLikes(comment_id);
+}
+
+function onBtnDeleteClick(e) {
+	let comment_id = this.getAttribute("data-id");
+	if (confirm("Are you sure you want to delete?")) {
+		deleteComment(comment_id);
+	}
+}

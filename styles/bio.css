@@ -42,6 +42,11 @@ a:active {
     padding: 0;
   }
 }
+@media (min-width: 1279px) {
+  .header {
+    align-items: flex-start;
+  }
+}
 .header__logo {
   height: 3rem;
   width: 3rem;
@@ -92,6 +97,7 @@ a:active {
 }
 @media (min-width: 768px) {
   .header__item {
+    font-size: 20px;
     width: auto;
     margin-left: 2rem;
     padding: 2rem 0 2rem 0;
@@ -409,6 +415,26 @@ a:active {
 }
 .comments__item__content {
   font-weight: 300;
+}
+.comments__item__statusbar {
+  background-color: #fafafa;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.do_add_like {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.do_delete {
+  background-color: transparent;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .footer {

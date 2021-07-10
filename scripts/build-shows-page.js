@@ -6,12 +6,13 @@ axios
 	.get(`${api_url}/showdates?api_key=${apiKey}`)
 	.then(function (response) {
 		response.data.forEach(function (elem) {
-			showsArray.push({
+			let obj = {
 				date: elem.date,
 				venue: elem.place,
 				location: elem.location,
-			});
-			addAllShows();
+			};
+			showsArray.push(obj);
+			displayShow(obj);
 		});
 	})
 	.catch(function (error) {
@@ -67,9 +68,9 @@ function displayShow(show) {
 	document.querySelector(".shows").appendChild(showContainer);
 }
 
-function addAllShows() {
-	for (let i = 0; i < showsArray.length; i++) {
-		displayShow(showsArray[i]);
-	}
-}
-addAllShows();
+// function addAllShows() {
+// 	for (let i = 0; i < showsArray.length; i++) {
+// 		displayShow(showsArray[i]);
+// 	}
+// }
+// addAllShows();

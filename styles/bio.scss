@@ -5,346 +5,370 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "avenirNextLTpro";
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "avenirNextLTpro";
 }
 @include linkreset;
 .header {
-  background-color: $bandsite-black;
-  padding: 1.5rem 0 0 0;
-  @media (min-width: $tablet-width) {
-    width: auto;
-    align-items: center;
-    justify-content: right;
-    padding: 0;
-  }
+	background-color: $bandsite-black;
+	padding: 1.5rem 0 0 0;
+	@media (min-width: $tablet-width) {
+		width: auto;
+		align-items: center;
+		justify-content: right;
+		padding: 0;
+	}
+	@media (min-width: $desktop-width) {
+		align-items: flex-start;
+	}
 
-  &__logo {
-    @include maxwidth;
-    height: 3rem;
-    width: 3rem;
-  }
-  &__nav {
-    @include maxwidth;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: $white;
-    width: 100vw;
-    @media (min-width: $tablet-width) {
-      justify-content: flex-start;
-      align-items: center;
-      padding-left: 2rem;
-    }
-  }
-  &__ul {
-    display: flex;
-    list-style-type: none;
-    width: 100%;
-    @media (min-width: $tablet-width) {
-      width: auto;
-    }
-  }
-  &__item {
-    width: 50%;
-    text-align: center;
-    padding-top: 1rem;
-    &:hover {
-      border-bottom: solid 0.1875rem #ff007f;
-    }
-    @media (min-width: $tablet-width) {
-      width: auto;
-      margin-left: 2rem;
-      padding: 2rem 0 2rem 0;
-    }
-    &--active {
-      border-bottom: solid 0.1875rem white;
-    }
-  }
+	&__logo {
+		@include maxwidth;
+		height: 3rem;
+		width: 3rem;
+	}
+	&__nav {
+		@include maxwidth;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		color: $white;
+		width: 100vw;
+		@media (min-width: $tablet-width) {
+			justify-content: flex-start;
+			align-items: center;
+			padding-left: 2rem;
+		}
+	}
+	&__ul {
+		display: flex;
+		list-style-type: none;
+		width: 100%;
+		@media (min-width: $tablet-width) {
+			width: auto;
+		}
+	}
+	&__item {
+		width: 50%;
+		text-align: center;
+		padding-top: 1rem;
+		&:hover {
+			border-bottom: solid 0.1875rem #ff007f;
+		}
+		@media (min-width: $tablet-width) {
+			font-size: 20px;
+			width: auto;
+			margin-left: 2rem;
+			padding: 2rem 0 2rem 0;
+		}
+		&--active {
+			border-bottom: solid 0.1875rem white;
+		}
+	}
 }
 .hero-container {
-  background-image: url("../assets/images/hero-bio.jpg");
+	background-image: url("../assets/images/hero-bio.jpg");
 
-  @include herocontainerspecs;
-  @include herooverlay;
+	@include herocontainerspecs;
+	@include herooverlay;
 
-  @media (min-width: $tablet-width) {
-    min-height: 25rem;
-  }
-  @media (min-width: $desktop-width) {
-    min-height: 37.5rem;
-  }
+	@media (min-width: $tablet-width) {
+		min-height: 25rem;
+	}
+	@media (min-width: $desktop-width) {
+		min-height: 37.5rem;
+	}
 
-  &__title {
-    position: relative;
-    color: $white;
-    display: flex;
-    align-items: center;
-    @include pageheader;
-  }
+	&__title {
+		position: relative;
+		color: $white;
+		display: flex;
+		align-items: center;
+		@include pageheader;
+	}
 }
 .about-section {
-  @include maxwidth;
-  &__title {
-    padding: 1.5rem 0 1rem 1rem;
-    @include sectionheader;
-    @include maxwidth;
-  }
-  &__img {
-    width: 100%;
-    padding: 1rem;
+	@include maxwidth;
+	&__title {
+		padding: 1.5rem 0 1rem 1rem;
+		@include sectionheader;
+		@include maxwidth;
+	}
+	&__img {
+		width: 100%;
+		padding: 1rem;
 
-    @media (min-width: $tablet-width) {
-      padding: 0 6rem 0 6rem;
-    }
-    @include maxwidth;
-  }
-  &__quote {
-    font-weight: 600;
-    line-height: 1.5rem;
-    padding: 1rem;
-    @media (min-width: $tablet-width) {
-      padding: 1rem 6rem 0 6rem;
-    }
-    @include maxwidth;
-  }
-  &__h2 {
-    @include subheader;
-    @media (min-width: $tablet-width) {
-      padding: 1rem 6rem 0 6rem;
-    }
-    @include maxwidth;
-  }
-  &__biowrap {
-    @media (min-width: $tablet-width) {
-      display: flex;
-      padding: 0 6rem 0 6rem;
-      @include maxwidth;
-    }
-  }
-  &__text {
-    padding: 1rem 1rem 0.3125rem 1rem;
-    @include bodytext;
-  }
+		@media (min-width: $tablet-width) {
+			padding: 0 6rem 0 6rem;
+		}
+		@include maxwidth;
+	}
+	&__quote {
+		font-weight: 600;
+		line-height: 1.5rem;
+		padding: 1rem;
+		@media (min-width: $tablet-width) {
+			padding: 1rem 6rem 0 6rem;
+		}
+		@include maxwidth;
+	}
+	&__h2 {
+		@include subheader;
+		@media (min-width: $tablet-width) {
+			padding: 1rem 6rem 0 6rem;
+		}
+		@include maxwidth;
+	}
+	&__biowrap {
+		@media (min-width: $tablet-width) {
+			display: flex;
+			padding: 0 6rem 0 6rem;
+			@include maxwidth;
+		}
+	}
+	&__text {
+		padding: 1rem 1rem 0.3125rem 1rem;
+		@include bodytext;
+	}
 }
 .gallery {
-  padding: 2rem 2rem 1rem 1rem;
-  background-color: $alabaster;
-  &__title {
-    @include sectionheader;
-    @media (min-width: $tablet-width) {
-      padding-left: 14.4px;
-    }
-    @include maxwidth;
-  }
-  &__photo {
-    width: 100%;
-    padding: 1rem 1rem 0 1rem;
-    filter: grayscale(100%);
-    &:hover {
-      filter: none;
-    }
-    @media (min-width: $tablet-width) {
-      width: calc(33.33% - (40px / 3));
-      padding: 0.5rem;
-    }
-  }
-  &__wrap {
-    @media (min-width: $tablet-width) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    @include maxwidth;
-  }
+	padding: 2rem 2rem 1rem 1rem;
+	background-color: $alabaster;
+	&__title {
+		@include sectionheader;
+		@media (min-width: $tablet-width) {
+			padding-left: 14.4px;
+		}
+		@include maxwidth;
+	}
+	&__photo {
+		width: 100%;
+		padding: 1rem 1rem 0 1rem;
+		filter: grayscale(100%);
+		&:hover {
+			filter: none;
+		}
+		@media (min-width: $tablet-width) {
+			width: calc(33.33% - (40px / 3));
+			padding: 0.5rem;
+		}
+	}
+	&__wrap {
+		@media (min-width: $tablet-width) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		@include maxwidth;
+	}
 }
 
 .comments {
-  @include maxwidth;
-  margin: 0 3.125rem 1rem 1.875rem;
-  &__title {
-    color: $bandsite-black;
-    font-size: 2.375rem;
-    font-weight: 400;
-    padding: 1.5rem;
-  }
+	@include maxwidth;
+	margin: 0 3.125rem 1rem 1.875rem;
+	&__title {
+		color: $bandsite-black;
+		font-size: 2.375rem;
+		font-weight: 400;
+		padding: 1.5rem;
+	}
 
-  &__avatar {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;
-    background-image: url("../assets/images/Mohan-muruge.jpg");
-    background-position: center left;
-    background-size: cover;
-    margin: 0.625rem;
-    padding-right: 1.25rem;
-  }
+	&__avatar {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 100%;
+		background-image: url("../assets/images/Mohan-muruge.jpg");
+		background-position: center left;
+		background-size: cover;
+		margin: 0.625rem;
+		padding-right: 1.25rem;
+	}
 
-  &__avatar2 {
-    background-color: $mercury;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;
-    margin: 0.625rem;
-  }
-  &__container {
-    @include maxwidth;
-    display: flex;
-    margin: 0.625rem 0;
-    &--right {
-      width: 100%;
-    }
-  }
+	&__avatar2 {
+		background-color: $mercury;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 100%;
+		margin: 0.625rem;
+	}
+	&__container {
+		@include maxwidth;
+		display: flex;
+		margin: 0.625rem 0;
+		&--right {
+			width: 100%;
+		}
+	}
 
-  &__form {
-    display: flex;
-    flex-direction: column;
-  }
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
 
-  &__question {
-    margin-bottom: 1.25rem;
+	&__question {
+		margin-bottom: 1.25rem;
 
-    & label {
-      text-transform: uppercase;
-      color: $silver;
-      font-size: 0.75rem;
-      display: block;
-      margin-bottom: 0.3125rem;
-    }
-  }
-  &__input {
-    display: block;
-    padding: 0.625rem;
-    width: 100%;
-    border-radius: 0.25rem;
-    border: 0.0625rem solid $silver;
-    background-color: $alabaster;
-    &--error {
-      border: 0.125rem solid #d22d2d;
-    }
-    &:active {
-      border: 0.0625rem solid $bandsite-black;
-    }
-  }
+		& label {
+			text-transform: uppercase;
+			color: $silver;
+			font-size: 0.75rem;
+			display: block;
+			margin-bottom: 0.3125rem;
+		}
+	}
+	&__input {
+		display: block;
+		padding: 0.625rem;
+		width: 100%;
+		border-radius: 0.25rem;
+		border: 0.0625rem solid $silver;
+		background-color: $alabaster;
+		&--error {
+			border: 0.125rem solid #d22d2d;
+		}
+		&:active {
+			border: 0.0625rem solid $bandsite-black;
+		}
+	}
 
-  &__button {
-    color: $white;
-    width: 100%;
-    margin: 1rem;
-    background-color: $bandsite-black;
-    font-size: 1.375rem;
-    border-radius: 0.25rem;
-    border: 0.0625rem solid #0000;
-    margin-bottom: 1rem;
-    &:hover {
-      background-color: black;
-    }
-    @media (min-width: $tablet-width) {
-      align-self: flex-end;
-      max-width: 12.5rem;
-      height: 3.75rem;
-    }
-  }
+	&__button {
+		color: $white;
+		width: 100%;
+		margin: 1rem;
+		background-color: $bandsite-black;
+		font-size: 1.375rem;
+		border-radius: 0.25rem;
+		border: 0.0625rem solid #0000;
+		margin-bottom: 1rem;
+		&:hover {
+			background-color: black;
+		}
+		@media (min-width: $tablet-width) {
+			align-self: flex-end;
+			max-width: 12.5rem;
+			height: 3.75rem;
+		}
+	}
 
-  &__item {
-    @include maxwidth;
-    display: flex;
-    border-top: 0.0625rem solid $silver;
-    padding: 1rem 0 1rem;
-    &__rightside {
-      flex-grow: 1;
-    }
+	&__item {
+		@include maxwidth;
+		display: flex;
+		border-top: 0.0625rem solid $silver;
+		padding: 1rem 0 1rem;
+		&__rightside {
+			flex-grow: 1;
+		}
 
-    &__title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem 0;
-    }
+		&__title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1.25rem 0;
+		}
 
-    &__date {
-      color: $silver;
-    }
+		&__date {
+			color: $silver;
+		}
 
-    &__content {
-      font-weight: 300;
-    }
-  }
+		&__content {
+			font-weight: 300;
+		}
+		&__statusbar {
+			background-color: #fafafa;
+			padding: 4px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+}
+
+.do_add_like {
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}
+
+.do_delete {
+	background-color: transparent;
+	border: 1px solid #cacaca;
+	border-radius: 5px;
+	padding: 5px;
 }
 
 .footer {
-  background-color: $bandsite-black;
-  color: $white;
-  padding: 1rem 1rem 2rem 1rem;
+	background-color: $bandsite-black;
+	color: $white;
+	padding: 1rem 1rem 2rem 1rem;
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media screen and (min-width: $tablet-width) {
-      flex-direction: row;
-      @include maxwidth;
-    }
-  }
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media screen and (min-width: $tablet-width) {
+			flex-direction: row;
+			@include maxwidth;
+		}
+	}
 
-  &__left {
-    flex-grow: 1;
-  }
+	&__left {
+		flex-grow: 1;
+	}
 
-  &__header {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 1rem 0 0 0;
-    @media screen and (min-width: $tablet-width) {
-      flex-direction: row;
-    }
-  }
+	&__header {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 1rem 0 0 0;
+		@media screen and (min-width: $tablet-width) {
+			flex-direction: row;
+		}
+	}
 
-  &__title {
-    margin-bottom: 20px;
-    @include sectionheader;
-    @media screen and (min-width: $tablet-width) {
-      margin-right: 20px;
-    }
-  }
+	&__title {
+		margin-bottom: 20px;
+		@include sectionheader;
+		@media screen and (min-width: $tablet-width) {
+			margin-right: 20px;
+		}
+	}
 
-  &__icons img {
-    margin-right: 10px;
-    padding: 0.5rem;
-  }
+	&__icons img {
+		margin-right: 10px;
+		padding: 0.5rem;
+	}
 
-  &__logo {
-    padding-top: 1rem;
-  }
+	&__logo {
+		padding-top: 1rem;
+	}
 
-  &__body {
-    padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media screen and (min-width: $tablet-width) {
-      flex-direction: row;
-    }
-  }
+	&__body {
+		padding-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media screen and (min-width: $tablet-width) {
+			flex-direction: row;
+		}
+	}
 
-  &__body__column {
-    margin-bottom: 30px;
-    @media screen and (min-width: $tablet-width) {
-    }
-  }
+	&__body__column {
+		margin-bottom: 30px;
+		@media screen and (min-width: $tablet-width) {
+		}
+	}
 
-  &__body__text {
-    margin-bottom: 10px;
-    @media screen and (min-width: $tablet-width) {
-      margin-bottom: 30px;
-    }
-  }
+	&__body__text {
+		margin-bottom: 10px;
+		@media screen and (min-width: $tablet-width) {
+			margin-bottom: 30px;
+		}
+	}
 
-  &__disclaimer {
-    padding-top: 20px;
-    @include maxwidth;
-  }
+	&__disclaimer {
+		padding-top: 20px;
+		@include maxwidth;
+	}
 }
