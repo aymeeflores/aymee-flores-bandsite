@@ -13,13 +13,15 @@ function getComments() {
 			commmentArray = response.data;
 			// create single item for each comment in array
 			response.data.sort((a, b) => {
-				if (a.timestamp < b.timestamp) {
-					return -1;
-				} else if (a.timestamp > b.timestamp) {
-					return 1;
-				} else {
-					return 0;
-				}
+				return a.timestamp - b.timestamp;
+
+				// if (a.timestamp < b.timestamp) {
+				// 	return -1;
+				// } else if (a.timestamp > b.timestamp) {
+				// 	return 1;
+				// } else {
+				// 	return 0;
+				// }
 			});
 			response.data.forEach((elem) => createCommentItem(elem));
 		})
@@ -122,7 +124,6 @@ function createCommentItem(obj) {
 	let commentsDate = document.createElement("div");
 	commentsDate.classList.add("comments__item__date");
 	commentsDate.setAttribute("data-date", date);
-	// commentsDate.innerText = date;
 	commentsTitle.appendChild(commentsDate);
 
 	rightSide.appendChild(commentsTitle);

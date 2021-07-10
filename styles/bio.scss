@@ -21,16 +21,15 @@
 		padding: 0;
 	}
 	@media (min-width: $desktop-width) {
-		align-items: flex-start;
 	}
 
 	&__logo {
 		@include maxwidth;
-		height: 3rem;
-		width: 3rem;
+		// height: 3rem;
+		// width: 3rem;
 	}
 	&__nav {
-		@include maxwidth;
+		// @include maxwidth;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -40,6 +39,9 @@
 			justify-content: flex-start;
 			align-items: center;
 			padding-left: 2rem;
+		}
+		@media (min-width: $desktop-width) {
+			width: 30vw;
 		}
 	}
 	&__ul {
@@ -166,8 +168,9 @@
 }
 
 .comments {
-	@include maxwidth;
+	// @include maxwidth;
 	margin: 0 3.125rem 1rem 1.875rem;
+
 	&__title {
 		color: $bandsite-black;
 		font-size: 2.375rem;
@@ -200,11 +203,22 @@
 		&--right {
 			width: 100%;
 		}
+		@media (min-width: $tablet-width) {
+			max-width: 800px;
+			margin: auto;
+		}
+
+		@media (min-width: $desktop-width) {
+			max-width: 600px;
+		}
 	}
 
 	&__form {
 		display: flex;
 		flex-direction: column;
+		@media (min-width: $desktop-width) {
+			max-width: 600px;
+		}
 	}
 
 	&__question {
@@ -219,12 +233,12 @@
 		}
 	}
 	&__input {
-		display: block;
 		padding: 0.625rem;
 		width: 100%;
 		border-radius: 0.25rem;
 		border: 0.0625rem solid $silver;
 		background-color: $alabaster;
+		font-weight: 300;
 		&--error {
 			border: 0.125rem solid #d22d2d;
 		}
@@ -236,9 +250,8 @@
 	&__button {
 		color: $white;
 		width: 100%;
-		margin: 1rem;
 		background-color: $bandsite-black;
-		font-size: 1.375rem;
+		font-size: 1.125rem;
 		border-radius: 0.25rem;
 		border: 0.0625rem solid #0000;
 		margin-bottom: 1rem;
@@ -248,7 +261,7 @@
 		@media (min-width: $tablet-width) {
 			align-self: flex-end;
 			max-width: 12.5rem;
-			height: 3.75rem;
+			height: 3rem;
 		}
 	}
 
@@ -257,8 +270,18 @@
 		display: flex;
 		border-top: 0.0625rem solid $silver;
 		padding: 1rem 0 1rem;
+		@media (min-width: $tablet-width) {
+			max-width: 800px;
+			margin: auto;
+		}
+		@media (min-width: $desktop-width) {
+			max-width: 600px;
+		}
 		&__rightside {
 			flex-grow: 1;
+			@media (min-width: $desktop-width) {
+				max-width: 600px;
+			}
 		}
 
 		&__title {
@@ -276,7 +299,6 @@
 			font-weight: 300;
 		}
 		&__statusbar {
-			background-color: #fafafa;
 			padding: 4px;
 			display: flex;
 			justify-content: space-between;
@@ -289,6 +311,7 @@
 	background-color: transparent;
 	border: 0;
 	padding: 0;
+	color: red;
 }
 
 .do_delete {
@@ -315,6 +338,9 @@
 
 	&__left {
 		flex-grow: 1;
+		@media (min-width: $desktop-width) {
+			padding-left: 250px;
+		}
 	}
 
 	&__header {
