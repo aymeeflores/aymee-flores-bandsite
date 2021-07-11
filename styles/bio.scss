@@ -23,10 +23,9 @@
 	@media (min-width: $desktop-width) {
 	}
 
-	&__logo {
+	&__logo img {
 		@include maxwidth;
-		// height: 3rem;
-		// width: 3rem;
+		height: 25px;
 	}
 	&__nav {
 		// @include maxwidth;
@@ -47,6 +46,7 @@
 	&__ul {
 		display: flex;
 		list-style-type: none;
+		padding-top: 9px;
 		width: 100%;
 		@media (min-width: $tablet-width) {
 			width: auto;
@@ -56,17 +56,21 @@
 		width: 50%;
 		text-align: center;
 		padding-top: 1rem;
+		font-weight: 400;
 		&:hover {
 			border-bottom: solid 0.1875rem #ff007f;
 		}
 		@media (min-width: $tablet-width) {
 			font-size: 18px;
 			width: auto;
-			margin-left: 2rem;
+			margin-left: 3rem;
 			padding: 2rem 0 2rem 0;
 		}
 		&--active {
 			border-bottom: solid 0.1875rem white;
+		}
+		&--inactive {
+			color: $silver;
 		}
 	}
 }
@@ -96,7 +100,7 @@
 .about-section {
 	@include maxwidth;
 	&__title {
-		padding: 1.5rem 0 1rem 1rem;
+		padding: 2rem;
 		@include sectionheader;
 		@include maxwidth;
 	}
@@ -258,13 +262,13 @@
 		border-radius: 0.25rem;
 		border: 0.0625rem solid #0000;
 		margin-bottom: 1rem;
+		height: 3rem;
 		&:hover {
 			background-color: black;
 		}
 		@media (min-width: $tablet-width) {
 			align-self: flex-end;
 			max-width: 12.5rem;
-			height: 3rem;
 		}
 	}
 

@@ -14,14 +14,6 @@ function getComments() {
 			// create single item for each comment in array
 			response.data.sort((a, b) => {
 				return a.timestamp - b.timestamp;
-
-				// if (a.timestamp < b.timestamp) {
-				// 	return -1;
-				// } else if (a.timestamp > b.timestamp) {
-				// 	return 1;
-				// } else {
-				// 	return 0;
-				// }
 			});
 			response.data.forEach((elem) => createCommentItem(elem));
 		})

@@ -42,8 +42,11 @@ a:active {
     padding: 0;
   }
 }
+.header__logo img {
+  height: 25px;
+}
 @media (min-width: 1279px) {
-  .header__logo {
+  .header__logo img {
     max-width: 1020px;
     margin: 0 auto;
   }
@@ -70,6 +73,7 @@ a:active {
 .header__ul {
   display: flex;
   list-style-type: none;
+  padding-top: 9px;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -81,6 +85,7 @@ a:active {
   width: 50%;
   text-align: center;
   padding-top: 1rem;
+  font-weight: 400;
 }
 .header__item:hover {
   border-bottom: solid 0.1875rem #ff007f;
@@ -89,12 +94,15 @@ a:active {
   .header__item {
     font-size: 18px;
     width: auto;
-    margin-left: 2rem;
+    margin-left: 3rem;
     padding: 2rem 0 2rem 0;
   }
 }
 .header__item--active {
   border-bottom: solid 0.1875rem white;
+}
+.header__item--inactive {
+  color: #afafaf;
 }
 
 .hero-container {
@@ -149,7 +157,7 @@ a:active {
   }
 }
 .about-section__title {
-  padding: 1.5rem 0 1rem 1rem;
+  padding: 2rem;
   font-size: 24px;
   font-weight: 400;
 }
@@ -381,6 +389,7 @@ a:active {
   border-radius: 0.25rem;
   border: 0.0625rem solid #0000;
   margin-bottom: 1rem;
+  height: 3rem;
 }
 .comments__button:hover {
   background-color: black;
@@ -389,7 +398,6 @@ a:active {
   .comments__button {
     align-self: flex-end;
     max-width: 12.5rem;
-    height: 3rem;
   }
 }
 .comments__item {
